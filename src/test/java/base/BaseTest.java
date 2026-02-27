@@ -17,8 +17,8 @@ public class BaseTest {
         driver.get("http://tutorialsninja.com/demo/");
     }
 
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }
-    //http://tutorialsninja.com/demo/
 }

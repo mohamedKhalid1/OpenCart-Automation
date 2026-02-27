@@ -5,6 +5,7 @@
     <test name="Regression Tests">
 
         <classes>
+            <class name="tests.LoginPageTest"/>
             <class name="tests.SearchPageTest"/>
         </classes>
 

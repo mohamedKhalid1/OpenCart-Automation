@@ -14,7 +14,7 @@ public class CartPage {
         this.driver = driver;
     }
 
-    By addToCartBtn = By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[3]/button[1]");
+    By addToCartBtn = By.xpath("//button[@onclick=\"cart.add('40');\"]");
     By cartTotal = By.id("cart-total");
 
     public void addToCart() {

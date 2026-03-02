@@ -5,10 +5,7 @@
     <test name="Regression Tests">
 
         <classes>
-            <class name="tests.LoginPageTest"/>
-            <class name="tests.SearchPageTest"/>
-            <class name="tests.AddToCartTest"/>
-            <class name="tests.CheckoutTest"/>
+            <class name="tests.CartPageTests"/>
         </classes>
 
     </test>

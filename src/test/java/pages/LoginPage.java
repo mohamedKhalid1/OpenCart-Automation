@@ -31,6 +31,6 @@ public class LoginPage {
     }
 
     public boolean loginIsSuccess(){
-        return driver.findElement(logoutBtn).isDisplayed();
+        return !driver.findElements(logoutBtn).isEmpty();
     }
 }

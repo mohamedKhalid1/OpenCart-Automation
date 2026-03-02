@@ -15,7 +15,10 @@ public class CartPage {
     }
 
     By addToCartBtn = By.xpath("//button[@onclick=\"cart.add('40');\"]");
+    By shoppingCartBTN = By.xpath("//a[@title='Shopping Cart']");
+    By removeProductFromCartBTN = By.xpath("//button[@data-original-title='Remove']");
     By cartTotal = By.id("cart-total");
+    By emptyCartMessage = By.xpath("//p[contains(text(),'shopping cart is empty')]");
 
     public void addToCart() {
         driver.findElement(addToCartBtn).click();
@@ -34,4 +37,14 @@ public class CartPage {
                 .contains("1 item");
     }
 
+    public void removeProductFromCart() {
+        driver.findElement(addToCartBtn).click();
+        driver.findElement(shoppingCartBTN).click();
+        driver.findElement(removeProductFromCartBTN).click();
+    }
+
+    public boolean isProductRemoved() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        return !driver.findElements(emptyCartMessage).isEmpty();
+    }
 }

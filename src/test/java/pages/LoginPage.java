@@ -15,7 +15,7 @@ public class LoginPage {
     By email = By.id("input-email");
     By password = By.id("input-password");
     By loginBtn = By.xpath("//input[@value='Login']");
-    By logoutBtn = By.linkText("Logout");
+    By logoutBtn = By.cssSelector(".list-group-item[href*='route=account/logout");
     By myAccountIcon = By.xpath("//a[@title='My Account']");
     By loginText = By.linkText("Login");
 
@@ -28,6 +28,9 @@ public class LoginPage {
         driver.findElement(email).sendKeys(mail);
         driver.findElement(password).sendKeys(pass);
         driver.findElement(loginBtn).click();
-        Assert.assertTrue(driver.findElement(logoutBtn).isDisplayed(), "Login Failed");
+    }
+
+    public boolean loginIsSuccess(){
+        return driver.findElement(logoutBtn).isDisplayed();
     }
 }

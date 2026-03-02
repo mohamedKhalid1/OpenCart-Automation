@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.*;
 
-import java.time.Duration;
 
 public class BaseTest {
 
@@ -15,6 +14,7 @@ public class BaseTest {
         driver = new EdgeDriver();
         driver.get("http://tutorialsninja.com/demo/");
     }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();

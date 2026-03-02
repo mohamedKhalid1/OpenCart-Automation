@@ -7,9 +7,9 @@ import pages.CartPage;
 
 public class AddToCartTest extends BaseTest {
     @Test
-    public void AddToCartScenario(){
-        CartPage cartPage=new CartPage(driver);
+    public void AddToCartScenario() {
+        CartPage cartPage = new CartPage(driver);
         cartPage.addToCart();
-        Assert.assertTrue(cartPage.isProductAdded(),"ADD To Cart Failed");
+        Assert.assertTrue(cartPage.isProductAdded(), "ADD To Cart Failed");
     }
 }

@@ -12,9 +12,11 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
         driver = new EdgeDriver();
+        driver.manage().window().maximize();
         driver.get("http://tutorialsninja.com/demo/");
     }
 
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }

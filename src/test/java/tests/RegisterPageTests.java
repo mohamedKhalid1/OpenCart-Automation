@@ -7,7 +7,7 @@ import pages.RegisterPage;
 
 public class RegisterPageTests extends BaseTest {
     @Test
-    public void RegisterWithValidCredentials() {
+    public void RegisterWithValidCredentialsTC() {
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.openRegisterPage();
         registerPage.RegisterToMyAccount("Mohamed", "Khalid", registerPage.generateRandomEmail(), "01234567891", "12345678", "12345678");
@@ -15,7 +15,7 @@ public class RegisterPageTests extends BaseTest {
     }
 
     @Test
-    public void RegisterWithAlreadyRegisteredEmail() {
+    public void RegisterWithAlreadyRegisteredEmailTC() {
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.openRegisterPage();
         registerPage.RegisterToMyAccount("Mohamed", "Khalid", "mohamedbenkhalid2066@gmail.com", "01234567891", "12345678", "12345678");
